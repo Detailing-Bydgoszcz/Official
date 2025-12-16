@@ -37,19 +37,19 @@
 <section class="about">
   <h2>O mnie</h2>
   <p>
-    Auto detailing to dla mnie pasja i dokładność w najczystszej formie. 
+    Auto detailing to moja pasja i dokładność w najczystszej formie. 
     Każde auto traktuję indywidualnie, skupiając się na detalach, które robią różnicę. 
     Ręczna praca, precyzja i uczciwe podejście.
   </p>
 </section>
 
-<!-- --- Pakiety główne z akordeonem --- -->
+<!-- --- Pakiety główne --- -->
 <section class="services">
   <h2>Pakiety główne</h2>
   <p class="note">Każdy pakiet główny zawiera: mycie zewnętrzne ręczne + osuszanie, szyby z zewnątrz, odkurzanie wnętrza, przetarcie plastików, szyby od środka, progi.</p>
 
   <div class="price-grid">
-
+    <!-- Małe auta -->
     <div class="price-box">
       <h3 class="accordion">Małe (A/B) – Yaris, Fiesta</h3>
       <div class="panel">
@@ -65,6 +65,7 @@
       </div>
     </div>
 
+    <!-- Kompakt -->
     <div class="price-box">
       <h3 class="accordion">Kompakt (C) – Golf, Focus</h3>
       <div class="panel">
@@ -80,6 +81,7 @@
       </div>
     </div>
 
+    <!-- Sedan/Kombi -->
     <div class="price-box">
       <h3 class="accordion">Sedan / Kombi (D) – Passat</h3>
       <div class="panel">
@@ -95,6 +97,7 @@
       </div>
     </div>
 
+    <!-- SUV kompakt -->
     <div class="price-box">
       <h3 class="accordion">SUV kompakt – T-Roc, Qashqai</h3>
       <div class="panel">
@@ -110,6 +113,7 @@
       </div>
     </div>
 
+    <!-- SUV średni/duży -->
     <div class="price-box">
       <h3 class="accordion">SUV średni / duży – Kodiaq, X5</h3>
       <div class="panel">
@@ -125,6 +129,7 @@
       </div>
     </div>
 
+    <!-- Van -->
     <div class="price-box">
       <h3 class="accordion">Van / 7 os.</h3>
       <div class="panel">
@@ -176,18 +181,18 @@
 
 <!-- --- JavaScript akordeon --- -->
 <script>
-  const accordions = document.querySelectorAll('.accordion');
-  accordions.forEach(acc => {
-    acc.addEventListener('click', () => {
-      acc.classList.toggle('active');
-      const panel = acc.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
+const accordions = document.querySelectorAll('.accordion');
+accordions.forEach(acc => {
+  acc.addEventListener('click', () => {
+    acc.classList.toggle('active');
+    const panel = acc.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
   });
+});
 </script>
 
 </body>
