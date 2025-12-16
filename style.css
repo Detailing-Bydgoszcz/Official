@@ -1,4 +1,87 @@
-/* Akordeon dla pakietów */
+/* --- Globalne --- */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  color: #f0d46f;
+}
+
+/* --- Hero --- */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #f0d46f;
+  color: #111;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* --- Ruchome ikony --- */
+.moving-icons .icon-car,
+.moving-icons .icon-wheel {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 6s infinite linear;
+}
+
+.icon-car:nth-child(1) { top: 20%; left: -50px; animation-duration: 8s; }
+.icon-wheel:nth-child(2) { top: 40%; left: -60px; animation-duration: 10s; }
+.icon-car:nth-child(3) { top: 60%; left: -70px; animation-duration: 12s; }
+.icon-wheel:nth-child(4) { top: 80%; left: -80px; animation-duration: 14s; }
+
+@keyframes float {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+/* --- Sekcje --- */
+section {
+  padding: 50px 20px;
+}
+
+.about, .services, .extras, .contact {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Akordeon pakietów --- */
 .accordion {
   cursor: pointer;
   background-color: #222;
@@ -36,4 +119,30 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Usługi dodatkowe --- */
+.extras ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.extras ul li span {
+  color: #f0d46f;
+}
+
+/* --- Kontakt --- */
+.contact-icons .icon {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #f0d46f;
+  text-decoration: none;
+}
+
+/* --- Stopka --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #f0d46f;
 }
