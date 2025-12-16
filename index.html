@@ -1,9 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Detailing – Bydgoszcz</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- --- Hero --- -->
+<header class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Czystość. Detal. Charakter.</h1>
+    <p>Profesjonalny auto detailing • Bydgoszcz</p>
+    <a href="#kontakt" class="btn">Kontakt</a>
+  </div>
+
+  <!-- Ruchome ikony samochodowe -->
+  <div class="moving-icons">
+    <div class="icon-car">🚗</div>
+    <div class="icon-wheel">🛞</div>
+    <div class="icon-car">🚘</div>
+    <div class="icon-wheel">🛞</div>
+  </div>
+</header>
+
+<!-- --- O mnie --- -->
+<section class="about">
+  <h2>O mnie</h2>
+  <p>
+    Auto detailing to dla mnie pasja i dokładność w najczystszej formie. 
+    Każde auto traktuję indywidualnie, skupiając się na detalach, które robią różnicę. 
+    Ręczna praca, precyzja i uczciwe podejście.
+  </p>
+</section>
+
+<!-- --- Pakiety główne z akordeonem --- -->
 <section class="services">
   <h2>Pakiety główne</h2>
   <p class="note">Każdy pakiet główny zawiera: mycie zewnętrzne ręczne + osuszanie, szyby z zewnątrz, odkurzanie wnętrza, przetarcie plastików, szyby od środka, progi.</p>
 
   <div class="price-grid">
-    <!-- Małe auta -->
+
     <div class="price-box">
       <h3 class="accordion">Małe (A/B) – Yaris, Fiesta</h3>
       <div class="panel">
@@ -19,7 +65,6 @@
       </div>
     </div>
 
-    <!-- Kompakt -->
     <div class="price-box">
       <h3 class="accordion">Kompakt (C) – Golf, Focus</h3>
       <div class="panel">
@@ -35,7 +80,6 @@
       </div>
     </div>
 
-    <!-- Sedan/Kombi -->
     <div class="price-box">
       <h3 class="accordion">Sedan / Kombi (D) – Passat</h3>
       <div class="panel">
@@ -51,7 +95,6 @@
       </div>
     </div>
 
-    <!-- SUV kompakt -->
     <div class="price-box">
       <h3 class="accordion">SUV kompakt – T-Roc, Qashqai</h3>
       <div class="panel">
@@ -67,7 +110,6 @@
       </div>
     </div>
 
-    <!-- SUV średni/duży -->
     <div class="price-box">
       <h3 class="accordion">SUV średni / duży – Kodiaq, X5</h3>
       <div class="panel">
@@ -83,7 +125,6 @@
       </div>
     </div>
 
-    <!-- Van -->
     <div class="price-box">
       <h3 class="accordion">Van / 7 os.</h3>
       <div class="panel">
@@ -102,7 +143,7 @@
   </div>
 </section>
 
-<!-- Usługi dodatkowe -->
+<!-- --- Usługi dodatkowe --- -->
 <section class="extras">
   <h2>Usługi dodatkowe</h2>
   <ul>
@@ -115,3 +156,39 @@
     <li>Odnawianie koloru czarnych plastików zewnętrznych: <span>+50 zł</span></li>
   </ul>
 </section>
+
+<!-- --- Kontakt --- -->
+<section id="kontakt" class="contact">
+  <h2>Kontakt</h2>
+  <p>Bydgoszcz</p>
+  <div class="contact-icons">
+    <a href="#" class="icon">📸</a>
+    <a href="#" class="icon">💬</a>
+    <a href="tel:+48123456789" class="icon">📞</a>
+  </div>
+  <p class="note">Kontakt telefoniczny / social media</p>
+</section>
+
+<!-- --- Stopka --- -->
+<footer>
+  <p>Auto Detailing • Bydgoszcz • GitHub Pages</p>
+</footer>
+
+<!-- --- JavaScript akordeon --- -->
+<script>
+  const accordions = document.querySelectorAll('.accordion');
+  accordions.forEach(acc => {
+    acc.addEventListener('click', () => {
+      acc.classList.toggle('active');
+      const panel = acc.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
